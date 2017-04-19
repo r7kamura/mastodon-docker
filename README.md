@@ -14,15 +14,27 @@ Contributions are welcome to support other repositories. (e.g. Docker Hub, Quay.
 
 Note: We use CircleCI build number for each built Docker image tag.
 
-## Environment variables
+## Required environment variables
 
-### Required
+### AWS_ACCESS_KEY_ID
 
-- `AWS_ACCESS_KEY_ID`
-- `AWS_DEFAULT_REGION`
-- `AWS_ECR_URL`
-- `AWS_SECRET_ACCESS_KEY`
+For `aws ecr get-login`.
 
-### Optional
+### AWS_DEFAULT_REGION
 
-- `MASTODON_GIT_URL` (default: `https://github.com/tootsuite/mastodon.git`)
+For `aws ecr get-login`.
+
+### AWS_SECRET_ACCESS_KEY
+
+For `aws ecr get-login`.
+
+### AWS_ECR_URL
+
+For `docker push ${AWS_ECR_URL}:${CIRCLE_BUILD_NUM}`.
+
+## Optional environment variables
+
+### MASTODON_GIT_URL
+
+For `git clone ${MASTODON_GIT_URL:-https://github.com/tootsuite/mastodon.git}`.
+Set this variable if you want to your build Docker image from another Mastodon Git repository.
