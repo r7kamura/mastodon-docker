@@ -15,9 +15,9 @@ deployment:
       - docker build --tag mastodon mastodon
       - docker run --env SECRET_KEY_BASE=dummy --volume $(pwd)/mastodon/public/assets:/mastodon/public/assets mastodon bundle exec rake assets:precompile
       - rm mastodon/.dockerignore
-      - docker build --tag ${MASTODON_DOCKER_IMAGE_REPOSITORY_URL}:${CIRCLE_BUILD_NUM} mastodon
+      - docker build --tag ${AWS_ECR_URL}:${CIRCLE_BUILD_NUM} mastodon
       - eval $(aws ecr get-login --region ${AWS_REGION})
-      - docker push ${MASTODON_DOCKER_IMAGE_REPOSITORY_URL}:${CIRCLE_BUILD_NUM}
+      - docker push ${AWS_ECR_URL}:${CIRCLE_BUILD_NUM}
 test:
   override:
     - echo "Skip test phase"
