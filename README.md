@@ -11,5 +11,6 @@ Build [mastodon](https://github.com/tootsuite/mastodon) docker image including p
 ## Environment variables
 
 - `AWS_ACCESS_KEY_ID`
+- `AWS_REGION`
 - `AWS_SECRET_ACCESS_KEY`
 - `MASTODON_DOCKER_IMAGE_REPOSITORY_URL`
