@@ -19,8 +19,8 @@ Note: We use CircleCI build number for each built Docker image tag.
 ### Required
 
 - `AWS_ACCESS_KEY_ID`
+- `AWS_DEFAULT_REGION`
 - `AWS_ECR_URL`
-- `AWS_REGION`
 - `AWS_SECRET_ACCESS_KEY`
 
 ### Optional
