@@ -37,4 +37,5 @@ For `docker push ${AWS_ECR_URL}:${CIRCLE_BUILD_NUM}`.
 ### MASTODON_GIT_URL
 
 For `git clone ${MASTODON_GIT_URL:-https://github.com/tootsuite/mastodon.git}`.
-Set this variable if you want to your build Docker image from another Mastodon Git repository.
+
+Set this to build Docker image from another Mastodon Git repository.
