@@ -14,3 +14,4 @@ Build [mastodon](https://github.com/tootsuite/mastodon) docker image including p
 - `AWS_ECR_URL`
 - `AWS_REGION`
 - `AWS_SECRET_ACCESS_KEY`
+- `MASTODON_GIT_URL` (default: `https://github.com/tootsuite/mastodon.git`)
