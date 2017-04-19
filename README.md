@@ -1,6 +1,6 @@
 # mastodon-docker
 
-Build and push assets-precompiled [Mastodon](https://github.com/tootsuite/mastodon) Docker image.
+Build and push assets-precompiled [Mastodon](https://github.com/tootsuite/mastodon) Docker image via [CircleCI](http://circleci.com/).
 
 Currently we support only AWS ECR as Docker image repository.
 Contributions are welcome to support other repositories. (e.g. Docker Hub, Quay.io, etc.)
