@@ -34,8 +34,14 @@ For `docker push ${AWS_ECR_URL}:${CIRCLE_BUILD_NUM}`.
 
 ## Optional environment variables
 
+### MASTODON_GIT_BRANCH
+
+Set this to build Docker image from another Mastodon Git branch.
+
+default: `master`
+
 ### MASTODON_GIT_URL
 
-For `git clone ${MASTODON_GIT_URL:-https://github.com/tootsuite/mastodon.git}`.
-
 Set this to build Docker image from another Mastodon Git repository.
+
+default: `https://github.com/tootsuite/mastodon.git`
